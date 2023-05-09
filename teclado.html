@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teclas</title>
+
+    <link rel="stylesheet" href="estilo.css">
+
+</head>
+<body>
+    
+    <div class="principal">
+
+        <div class="linha zero">
+            <button>Esc</button>
+        </div>
+
+
+        <div class="linha um">
+            <button>"</button>
+            <button>!<br>1</button>
+            <button>2</button>
+            <button>3</button>
+            <button>4</button>
+            <button>5</button>
+            <button>6</button>
+            <button>7</button>
+            <button>8</button>
+            <button>9</button>
+            <button>0</button>
+            <button>-</button>
+            <button>=</button>
+            <button class="back" id="back">Backspace</button>
+            
+        </div>
+
+
+        <div class="linha dois">
+            <button class="tab">Tab</button>
+            <button>Q</button>
+            <button>W</button>
+            <button>E</button>
+            <button>R</button>
+            <button>T</button>
+            <button>Y</button>
+            <button>U</button>
+            <button>I</button>
+            <button>O</button>
+            <button>P</button>
+            <button>{</button>
+            <button>}</button>
+            <button class="slace">\</button>
+            
+        </div>
+
+
+        <div class="linha três">
+            <button class="cap">Caps Lock</button>
+            <button>A</button>
+            <button>S</button>
+            <button>D</button>
+            <button>F</button>
+            <button>G</button>
+            <button>H</button>
+            <button>I</button>
+            <button>J</button>
+            <button>K</button>
+            <button>L</button>
+            <button>;</button>
+            <button>~</button>
+            <button class="enter-btn" id="enter">Enter</button>
+            
+        </div>
+
+        <div class="linha quatro">
+            <button class="shift">Shift</button>
+            <button>Z</button>
+            <button>X</button>
+            <button>C</button>
+            <button>V</button>
+            <button>B</button>
+            <button>N</button>
+            <button>M</button>
+            <button><</button>
+            <button>></button>
+            <button>?</button>
+            <button class="shift">Shift</button>
+            <button>↑</button>
+            
+        </div>
+
+        <div class="linha cinco">
+            <button class="last">Ctrl</button>
+            <button class="last">Fn</button>
+            <button class="last">Win</button>
+            <button class="last">Alt</button>
+            <button class="space">Space</button>
+            <button class="last">Alt</button>
+            <button class="last">Fn</button>
+            <button class="last">Ctrl</button>
+            <button class="last">←</button>
+            <button class="last">↓</button>
+            <button class="last">→</button>
+       </div>
+    </div>
+
+</body>
+
+<script>
+    
+document.onkeydown = Pega_Tecla;
+
+var botao = document.getElementById('enter');
+
+function handleKeyPress(event)
+{
+  if (event.keyCode === 13) 
+  {
+    botao.classList.add('botao-clicado');
+  }
+}
+
+function handleKeyRelease(event) 
+{
+  if (event.keyCode === 13) 
+  {
+    botao.classList.remove('botao-clicado');
+  }
+}
+
+    document.addEventListener('keydown', handleKeyPress);
+    document.addEventListener('keyup', handleKeyRelease);  
+
+    var botao = document.getElementById('back');
+
+function handleKeyPress(event) 
+{
+  if (event.keyCode === 8) 
+  {
+    botao.classList.add('botao-clicado');
+  }
+}
+
+function handleKeyRelease(event) 
+{
+  if (event.keyCode === 8) 
+  {
+    botao.classList.remove('botao-clicado');
+  }
+}
+
+document.addEventListener('keydown', handleKeyPress);
+document.addEventListener('keyup', handleKeyRelease);  
+
+</script>
+
+</html>
