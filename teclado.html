@@ -7,6 +7,7 @@
     <title>Teclas</title>
 
     <link rel="stylesheet" href="estilo.css">
+    <script src="js.js"></script>
 
 </head>
 <body>
@@ -14,146 +15,94 @@
     <div class="principal">
 
         <div class="linha zero">
-            <button>Esc</button>
+            <button><br>Escape</button>
         </div>
 
 
         <div class="linha um">
-            <button>"</button>
+            <button>"<br>'</button>
             <button>!<br>1</button>
-            <button>2</button>
-            <button>3</button>
-            <button>4</button>
-            <button>5</button>
-            <button>6</button>
-            <button>7</button>
-            <button>8</button>
-            <button>9</button>
-            <button>0</button>
-            <button>-</button>
-            <button>=</button>
-            <button class="back" id="back">Backspace</button>
+            <button>@<br>2</button>
+            <button>#<br>3</button>
+            <button>$<br>4</button>
+            <button>%<br>5</button>
+            <button>¨<br>6</button>
+            <button>&<br>7</button>
+            <button>*<br>8</button>
+            <button>(<br>9</button>
+            <button>)<br>0</button>
+            <button>_<br>-</button>
+            <button>+<br>=</button>
+            <button class="back" id="back"><br>Backspace</button>
             
         </div>
 
 
         <div class="linha dois">
-            <button class="tab">Tab</button>
-            <button>Q</button>
-            <button>W</button>
-            <button>E</button>
-            <button>R</button>
-            <button>T</button>
-            <button>Y</button>
-            <button>U</button>
-            <button>I</button>
-            <button>O</button>
-            <button>P</button>
-            <button>{</button>
-            <button>}</button>
-            <button class="slace">\</button>
+            <button class="tab"><br>Tab</button>
+            <button><br>Q</button>
+            <button><br>W</button>
+            <button><br>E</button>
+            <button><br>R</button>
+            <button><br>T</button>
+            <button><br>Y</button>
+            <button><br>U</button>
+            <button><br>I</button>
+            <button><br>O</button>
+            <button><br>P</button>
+            <button>`<br>´</button>
+            <button>{<br>[</button>
+            <button class="barra"><br>\</button>
             
         </div>
 
 
         <div class="linha três">
-            <button class="cap">Caps Lock</button>
-            <button>A</button>
-            <button>S</button>
-            <button>D</button>
-            <button>F</button>
-            <button>G</button>
-            <button>H</button>
-            <button>I</button>
-            <button>J</button>
-            <button>K</button>
-            <button>L</button>
-            <button>;</button>
-            <button>~</button>
-            <button class="enter-btn" id="enter">Enter</button>
+            <button class="cap"><br>Caps Lock</button>
+            <button><br>A</button>
+            <button><br>S</button>
+            <button><br>D</button>
+            <button><br>F</button>
+            <button><br>G</button>
+            <button><br>H</button>
+            <button><br>J</button>
+            <button><br>K</button>
+            <button><br>L</button>
+            <button>:<br>;</button>
+            <button>}<br>]</button>
+            <button class="enter-btn" id="enter"><br>Enter</button>
             
         </div>
 
         <div class="linha quatro">
-            <button class="shift">Shift</button>
-            <button>Z</button>
-            <button>X</button>
-            <button>C</button>
-            <button>V</button>
-            <button>B</button>
-            <button>N</button>
-            <button>M</button>
-            <button><</button>
-            <button>></button>
-            <button>?</button>
-            <button class="shift">Shift</button>
-            <button>↑</button>
+            <button class="shift"><br>Shift</button>
+            <button><br>Z</button>
+            <button><br>X</button>
+            <button><br>C</button>
+            <button><br>V</button>
+            <button><br>B</button>
+            <button><br>N</button>
+            <button><br>M</button>
+            <button><<br>,</button>
+            <button>><br>.</button>
+            <button>?<br>/</button>
+            <button class="shift"><br>Shift</button>
+            <button><br>↑</button>
             
         </div>
 
         <div class="linha cinco">
-            <button class="last">Ctrl</button>
-            <button class="last">Fn</button>
-            <button class="last">Win</button>
-            <button class="last">Alt</button>
-            <button class="space">Space</button>
-            <button class="last">Alt</button>
-            <button class="last">Fn</button>
-            <button class="last">Ctrl</button>
-            <button class="last">←</button>
-            <button class="last">↓</button>
-            <button class="last">→</button>
+            <button class="ctrl">Ctrl</button>
+            <button>Win</button>
+            <button>Alt</button>
+            <button class="espaço"><br> </button>
+            <button>AltGr</button>     
+            <button class="ctrl2">Ctrl</button>
+            <button>←</button>
+            <button>↓</button>
+            <button>→</button>
        </div>
     </div>
 
 </body>
-
-<script>
-    
-document.onkeydown = Pega_Tecla;
-
-var botao = document.getElementById('enter');
-
-function handleKeyPress(event)
-{
-  if (event.keyCode === 13) 
-  {
-    botao.classList.add('botao-clicado');
-  }
-}
-
-function handleKeyRelease(event) 
-{
-  if (event.keyCode === 13) 
-  {
-    botao.classList.remove('botao-clicado');
-  }
-}
-
-    document.addEventListener('keydown', handleKeyPress);
-    document.addEventListener('keyup', handleKeyRelease);  
-
-    var botao = document.getElementById('back');
-
-function handleKeyPress(event) 
-{
-  if (event.keyCode === 8) 
-  {
-    botao.classList.add('botao-clicado');
-  }
-}
-
-function handleKeyRelease(event) 
-{
-  if (event.keyCode === 8) 
-  {
-    botao.classList.remove('botao-clicado');
-  }
-}
-
-document.addEventListener('keydown', handleKeyPress);
-document.addEventListener('keyup', handleKeyRelease);  
-
-</script>
-
 </html>
